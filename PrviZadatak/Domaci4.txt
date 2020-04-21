@@ -1,0 +1,21 @@
+public class Main {
+
+    public static boolean amsbr(int a) {
+		int br = a, s = 0;
+		while (a != 0) {
+			s = (int) (s + Math.pow(a % 10, 3));
+			a =a/ 10;
+		}
+		return (s == br) ? true : false;
+	}
+	
+	public static void main(String[] args) {
+            System.out.println("Trazeni brojevi su: ");
+		for (int i = 100; i <= 999; i++) {
+			if (amsbr(i)) {
+				System.out.println(i);
+			}
+		}
+	}
+
+}

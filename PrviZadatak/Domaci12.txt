@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+				int s = 0, x;
+				System.out.println("Unesite broj:");
+				Scanner tastatura = new Scanner(System.in);
+				x = tastatura.nextInt();
+				while (x != 0) {
+						s += x % 10;
+						x /= 10;
+				}
+				System.out.println("Suma cifara unetog broja je " + s);
+				tastatura.close();
+	}
+
+}
+	

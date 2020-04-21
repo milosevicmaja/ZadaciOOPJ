@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+				int n;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite duzinu niza:");
+				n = tastatura.nextInt();
+				int[] niz = new int[n];
+				for (int i = 0; i < niz.length; i++) {
+						niz[i] = (int) (Math.random() * 90) + 10;
+						for (int j = 0; j < i; j++) {
+								if (niz[i] == niz[j]) {
+										i--;
+										break;
+								}
+						}
+				}
+                System.out.println("Niz:");
+				int min = niz[0], max = niz[0];
+				for (int i = 0; i < niz.length; i++) {
+						System.out.println(niz[i]);
+						if (min > niz[i]) {
+								min = niz[i];
+						}
+						if (max < niz[i]) {
+								max = niz[i];
+						}
+				}
+				System.out.println("Najmanji clan niza:" + min);
+				System.out.println("Najveci clan niza:" + max);
+				tastatura.close();
+	}
+}

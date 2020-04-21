@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+
+
+	public static void main(String[] args) {
+				Scanner tastatura = new Scanner(System.in);
+                System.out.print("Unesite vasu platu:");
+                int plata = tastatura.nextInt();
+                if( plata > 60000 ){
+						System.out.println("Bonus iznosi 750 dinara.");
+				}
+                else { 	System.out.println("Bonus iznosi 1500 dinara.");
+				}
+				tastatura.close();
+	}
+	
+}

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+				double a, b;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite prvi broj:");
+				a = tastatura.nextDouble();
+                System.out.println("Unesite drugi broj:");
+				b = tastatura.nextDouble();
+                System.out.println("Da li zelite 1-zbir, 2-razliku, 3-proizvod ili 4-kolicnik?");
+				switch(tastatura.nextInt()) {
+						case 1:
+							System.out.println(a + b);
+							break;
+						case 2:
+							System.out.println(a - b);
+							break;
+						case 3:
+							System.out.println(a * b);
+							break;
+						case 4:
+							System.out.println(a / b);
+							break;
+						default:
+							System.out.println("Greska");
+				}
+				tastatura.close();
+	}
+}

@@ -1,0 +1,67 @@
+import java.util.Scanner;
+public class Main {
+
+
+	public static void sortiraj(int[] n, int nep, int par) {
+				int nn = 0, pp = 0;
+				int[] NEP = new int[nep];
+				int[] PAR = new int[par];
+				for (int i = 0; i < n.length; i++) {
+						if (n[i] % 2 == 0) {
+								PAR[pp++] = n[i];
+						} else {
+								NEP[nn++] = n[i];
+						}
+				}
+				for (int i = 0; i < PAR.length - 1; i++) {
+						for (int j = i + 1; j < PAR.length; j++) {
+								if (PAR[i] > PAR[j]) {
+										int a = PAR[i];
+										PAR[i] = PAR[j];
+										PAR[j] = a;
+								}
+						}
+				}
+				for (int i = 0; i < NEP.length - 1; i++) {
+						for (int j = i + 1; j < NEP.length; j++) {
+								if (NEP[i] < NEP[j]) {
+										int a = NEP[i];
+										NEP[i] = NEP[j];
+										NEP[j] = a;
+								}
+						}
+				}
+				nn = pp = 0;
+				for (int i = 0; i < n.length; i++) {
+						if (i < PAR.length) {
+								n[i] = PAR[pp++];
+						} else {
+								n[i] = NEP[nn++];
+						}
+				}
+	}
+
+	public static void main(String[] args) {
+				int m, nep = 0, par = 0;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite duzinu niza:");
+				m = tastatura.nextInt();
+                System.out.println("Unesite clanove niza:");
+				int[] n = new int[m];
+				for (int i = 0; i < n.length; i++) {
+						if ((n[i] = tastatura.nextInt()) % 2 == 0) {
+								par++;
+						} else {
+								nep++;
+						}
+				}
+                System.out.println("Sortiran niz:");
+				sortiraj(n, nep, par);
+				for (int i = 0; i < n.length; i++) {
+						System.out.print(n[i] + "\t");
+				}
+				tastatura.close();
+	}
+	
+	
+}

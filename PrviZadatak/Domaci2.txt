@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+				int n, s=0;
+				System.out.println("Unesite koliko n brojeva:");
+				Scanner tastatura = new Scanner(System.in);
+				n = tastatura.nextInt();
+				for(int i = 0; i < n; i++){
+						if (i % 3 != 0){
+							s=s+i;
+						}
+				}
+				System.out.println("Suma brojeva je " + s);
+				tastatura.close();
+     
+    }
+
+}

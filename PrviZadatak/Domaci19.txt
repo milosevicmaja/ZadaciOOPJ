@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+				int n;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite duzinu niza:");
+				n = tastatura.nextInt();
+				int[] niz = new int[n];
+                System.out.println("Unesite clanove niza:");
+				for (int i = 0; i < n; i++) {
+						niz[i] = tastatura.nextInt();
+				}
+				for (int i = 0; i < niz.length - 1; i++) {
+						for (int j = i + 1; j < niz.length; j++) {
+								if (niz[i] > niz[j]) {
+										int a = niz[i];
+										niz[i] = niz[j];
+										niz[j] = a;
+								}
+						}
+				}
+				int c = 1;
+                System.out.println("Clanovi koji se ponavljaju dva puta:");
+				for (int i = 0; i < niz.length - 1; i++) {
+						if(niz[i] != niz[i + 1]) {
+								if (c == 2) {
+										System.out.println(niz[i]);
+								}
+								c = 1;
+						} else {
+								c++;
+						}
+				}
+				tastatura.close();
+	}
+}

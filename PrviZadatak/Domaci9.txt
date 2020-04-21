@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+
+   public static void main(String[] args) {
+				int x, c;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite broj x:");
+				x = tastatura.nextInt();
+                System.out.println("Unesite broj c:");
+				c = tastatura.nextInt();
+				do {	if (x % 10 == c) {
+						System.out.println("U broju x postoji cifra " + c);
+                        break;
+						}		
+				x = x / 10;
+				} while (x != 0);
+				if (x == 0) {
+					System.out.println("U broju x ne postoji cifra " + c);
+				}
+				tastatura.close();
+	}

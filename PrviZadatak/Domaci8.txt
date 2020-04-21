@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Main {
+
+   public static void main(String[] args) {
+				int n;
+				double s = 0, as;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite duzinu niza:");
+				n = tastatura.nextInt();
+				int[] niz = new int[n];
+				for (int i = 0; i < n; i++) {
+                        System.out.print("Unesite " + (i+1) + ". clan niza:");
+						niz[i] = tastatura.nextInt();
+						s = s + niz[i];
+				}
+                as = s / n;
+				System.out.println("Aritmeticka sredina unetih brojeva je " + as);
+				for (int i = n - 1; i >= 0; i--) {
+						System.out.print(niz[i] + " ");
+				}
+				tastatura.close();
+	}
+
+}

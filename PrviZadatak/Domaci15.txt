@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void sortiraj(int[] niz, char or) {
+				for (int i = 0; i < niz.length - 1; i++) {
+					for (int j = i + 1; j < niz.length; j++) {
+							if (or == 'o') {
+								if (niz[i] < niz[j]) {
+									int a = niz[i];
+									niz[i] = niz[j];
+									niz[j] = a;
+								}
+							} else {
+								if (niz[i] > niz[j]) {
+									int a = niz[i];
+									niz[i] = niz[j];
+									niz[j] = a;
+								}
+							}
+					}
+				}
+	}
+	
+	public static void main(String[] args) {
+				int a;
+				char or;
+				Scanner tastatura = new Scanner(System.in);
+				System.out.print("Unesite duzinu niza:");
+				a = tastatura.nextInt();
+				int[] niz = new int[a];
+				System.out.println("Unesite clanove niza:");
+				for (int i = 0; i < a; i++) {
+						niz[i] = tastatura.nextInt();
+				}
+				do {
+					System.out.print("Sortiranje je o-opadajuce ili r-rastuce? ");
+					or = Character.toLowerCase(tastatura.next().charAt(0));
+				} while (or != 'o' && or != 'r');
+				sortiraj(niz, or);
+				for (int i = 0; i < niz.length; i++) {
+								System.out.print(niz[i] + "\t");
+				}
+				tastatura.close();
+	}
+}

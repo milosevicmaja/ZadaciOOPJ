@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class Main {
+	
+		public static void main(String[] args) {
+					int n, s = 0;
+					System.out.println("Unesite brojeve:");
+					Scanner tastatura = new Scanner(System.in);
+					while((n = tastatura.nextInt()) != 0){
+								s=s+n;  
+					}
+					System.out.println("Suma unetih brojeva je " + s);
+					tastatura.close();
+    }
+
+}

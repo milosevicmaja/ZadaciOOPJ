@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Unesite brojeve m i n:");
+        int m, n, r;
+		Scanner tastatura = new Scanner(System.in);
+		m = tastatura.nextInt();
+		n = tastatura.nextInt();
+        r=((n + (int) Math.pow(m, 2)) * (2 * (int) Math.pow(n, 3) + 3 * (int) Math.pow(m, 4)));
+		System.out.println("Resenje datog izraza je " + r);
+		tastatura.close();
+     
+    }
+
+}

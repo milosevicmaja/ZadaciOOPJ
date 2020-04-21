@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main {
+
+  public static void matrica(int[][] a) {
+			for (int i = 0; i < a.length; i++) {
+					for (int j = 0; j < a[i].length; j++) {
+							System.out.print(a[i][j] + "\t");
+					}
+					System.out.println("");
+			}
+	}
+	
+	public static void main(String[] args) {
+				int n, m;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite broj vrsta:");
+				n = tastatura.nextInt();
+                System.out.println("Unesite broj kolona:");
+				m = tastatura.nextInt();
+					int[][] a = new int[n][m];
+					int[][] b = new int[m][n];
+                System.out.println("Unesite " + (m*n) +" clanova matrice:");
+				for (int i = 0; i < a.length; i++) {
+						for (int j = 0; j < a[i].length; j++) {
+								a[i][j] = tastatura.nextInt();
+								b[j][i] = a[i][j];
+						}
+				}
+                System.out.println("Uneta matrica:");
+					matrica(a);
+                System.out.println("Transponovana matrica:");
+					matrica(b);
+				tastatura.close();
+	}
+	}

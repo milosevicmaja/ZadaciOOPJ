@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+			int i = 2;
+			double x, br = 1;
+            System.out.println("Unesite broj x:");
+			Scanner tastatura = new Scanner(System.in);
+			x = tastatura.nextDouble();
+			while (x > br) {
+					br = br + ((double)1/i);
+					i++;
+			}
+			System.out.println("Prvi broj veci od unetog broja " + x + " je " + br);
+			tastatura.close();
+	}
+
+}

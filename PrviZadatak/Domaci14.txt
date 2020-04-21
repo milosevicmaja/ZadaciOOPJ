@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+				int x, n;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite pocetni broj:");
+				x = tastatura.nextInt();
+                System.out.println("Unesite n:");
+				n = tastatura.nextInt();
+				while (true) {
+						if (x % n == 0) {
+						break;
+				} else {
+						x++;
+				  }
+				}
+		        System.out.println("Prvi broj koji je deljiv brojem " + n + " je " + x);
+		        tastatura.close();
+	}
+
+}

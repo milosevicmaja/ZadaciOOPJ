@@ -1,0 +1,44 @@
+import java.util.Scanner;
+public class Main {
+
+	public static int[] promeni(int[] n, int a, int b) {
+				int x = 0;
+				int[] niz = new int[n.length - b + a + 1];
+				for (int i = 0; i < n.length; i++) {
+					if (i <= a || i >= b) {
+						niz[x++] = n[i];
+					}
+				}
+				return niz;
+	}
+	
+	public static void main(String[] args) {
+				int x, a, b, aa = 0, bb = 0;
+				Scanner tastatura = new Scanner(System.in);
+                System.out.println("Unesite duzinu niza:");
+					x = tastatura.nextInt();
+                System.out.println("Unesite broj a:");
+					a = tastatura.nextInt();
+                System.out.println("Unesite broj b:");
+					b = tastatura.nextInt();
+                
+				int[] n = new int[x];
+                System.out.println("Unesite clanove niza:");
+				for (int i = 0; i < x; i++) {
+				n[i] = tastatura.nextInt();
+				if (n[i] == a) {
+						aa = i;
+				}
+				if (n[i] == b) {
+				bb = i;
+				}
+				}
+				int[] niz = promeni(n, aa, bb);
+				System.out.println("Niz bez brojeva od a do b:");
+				for (int i = 0; i < niz.length; i++) {
+							System.out.print(niz[i] + "\t");
+				}
+				tastatura.close();
+	}
+	
+}

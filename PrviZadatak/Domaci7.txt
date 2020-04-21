@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Main {
+
+   public static void main(String[] args) {
+				double s = 0, as;
+                System.out.println("Unesite pet brojeva:");
+				Scanner tastatura = new Scanner(System.in);
+				for (int i = 0; i < 5; i++) {
+							s = s + tastatura.nextInt();
+				}
+                as = s / 5;
+				System.out.println("Aritmeticka sredina unetih brojeva je " + as);
+				tastatura.close();
+	}
+
+}

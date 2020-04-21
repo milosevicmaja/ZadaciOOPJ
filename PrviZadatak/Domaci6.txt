@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+
+   public static void main(String[] args) {
+				int n, m, s = 0;
+				Scanner tastatura = new Scanner(System.in);
+				do {    System.out.println("Unesite m:");
+							m = tastatura.nextInt();
+						System.out.println("Unesite n:");
+							n = tastatura.nextInt();
+				} while (!(n > m));
+					for (int i = m; i <= n; i++) {
+					s = s + (i % 2 == 0 ? (int) Math.pow(i, 2) : (int) Math.pow(i, 3));
+				}
+				System.out.println("Suma je " + s);
+				tastatura.close();
+	}
+
+}
