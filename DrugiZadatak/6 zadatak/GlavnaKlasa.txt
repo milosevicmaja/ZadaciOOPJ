@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class GlavnaKlasa {
+		public static void main(String[] args) {
+		Scanner tastatura = new Scanner(System.in);
+        System.out.println("Unesite string:");
+		MajaMilosevic mm = new MajaMilosevic();
+		mm.setS(tastatura.nextLine());
+        System.out.println("String u obrnutom redosledu:");
+		System.out.println(mm.getS());
+		tastatura.close();
+		}
+
+}

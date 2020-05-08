@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class GlavnaKlasa {
+		public static void main(String[] args) {
+		Scanner tastatura = new Scanner(System.in);
+		MajaMilosevic mm = new MajaMilosevic();
+        System.out.println("Unesite prvi string:");
+		mm.sets1(tastatura.nextLine());
+        System.out.println("Unesite drugi string:");
+		mm.sets2(tastatura.nextLine());
+        System.out.println("Treci string:");
+		System.out.println(mm.gets3());
+		tastatura.close();
+	}
+
+}

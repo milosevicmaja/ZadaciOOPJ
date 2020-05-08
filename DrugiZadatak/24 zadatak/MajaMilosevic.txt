@@ -1,0 +1,17 @@
+public class MajaMilosevic {
+    private String a;
+	
+	public String getA() {
+		return a;
+	}
+
+	public void setA(String a) {
+		this.a = a;
+	}
+
+	public void print() {
+		for (int i = 0; i < a.length(); i++) {
+			System.out.println(a.charAt(i));
+		}
+	}
+}  

@@ -1,0 +1,36 @@
+public class MajaMilosevic {
+    private String A;
+
+	public String getA() {
+		return A;
+	}
+
+	public void setA(String a) {
+		this.A = a;
+	}
+
+	public String stringB() {
+		String B = ""; 
+		for (char ch : A.toCharArray()) {
+			switch (ch) {
+			case 'a' :
+				B += 'i';
+				break;
+			case 'A' :
+				B += 'I';
+				break;
+			case 'i' :
+				B += 'a';
+				break;
+			case 'I' :
+				B += 'A';
+				break;
+			default:	
+				B += ch;
+			}
+		}
+		return B;
+	}
+
+	
+}  

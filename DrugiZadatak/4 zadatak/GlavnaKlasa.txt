@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class GlavnaKlasa {
+  public static void main(String[] args) {
+		Scanner tastatura = new Scanner(System.in);
+        System.out.println("Unesite recenicu:");
+		MajaMilosevic mm = new MajaMilosevic();
+		mm.setRecenica(tastatura.nextLine());
+        System.out.println("Trazena recenica je:");
+		System.out.println(mm.getRecenica());
+		tastatura.close();
+	}
+
+
+}

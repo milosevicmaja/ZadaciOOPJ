@@ -1,0 +1,32 @@
+public class MajaMilosevic {
+    private String a;
+	
+	public String getA() {
+		return a;
+	}
+
+	public void setA(String a) {
+		this.a = a;
+	}
+
+	public String stringB() {
+		int c = 0;
+		char[] niz = new char[a.length()];
+		boolean b = false;
+		for(int i = 0; i < a.length(); i++) {
+			if (b == false) {
+				if (a.charAt(i) == '"') {
+					b = true;
+				} else {
+					niz[c++] = a.charAt(i);
+				}
+			} else {
+				if (a.charAt(i) == '"') {
+					b = false;
+					i++;
+				}
+			}
+		}
+		return new String(niz);
+	}
+}  

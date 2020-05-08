@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class GlavnaKlasa {
+		public static void main(String[] args) {
+		Scanner tastatura = new Scanner(System.in);
+		MajaMilosevic mm = new MajaMilosevic();
+        System.out.println("Unesite string:");
+		mm.sets1(tastatura.nextLine());
+		System.out.println("Sifrovan tekst: " + mm.sifrovanje());
+		System.out.println();
+		tastatura.close();
+	}
+
+}

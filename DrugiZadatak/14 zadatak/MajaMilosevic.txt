@@ -1,0 +1,26 @@
+public class MajaMilosevic {
+      private String A;
+
+	public String getA() {
+		return A;
+	}
+
+	public void setA(String a) {
+		this.A = a;
+	}
+
+	public String stringB() {
+		StringBuilder B = new StringBuilder(A);
+		while (B.indexOf("!") != -1) {
+			int index = B.indexOf("!");
+			B.replace(index, index + 1, ", vicemo.");
+		}
+		while (B.indexOf("?") != -1) {
+			int index = B.indexOf("?");
+			B.replace(index, index + 1, ", pitamo se.");
+		}
+		return B.toString();
+	}
+
+	
+}  

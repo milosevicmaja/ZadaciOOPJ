@@ -1,0 +1,22 @@
+public class MajaMilosevic {
+  private String A;
+
+	public String getA() {
+		return A;
+	}
+
+	public void setA(String a) {
+		this.A = a;
+	}
+
+	public String najduza() {
+		String[] niz = A.split(" ");
+		String najduza = niz[0];
+		for (int i = 1; i < niz.length; i++) {
+			if (najduza.length() < niz[i].length()) {
+				najduza = niz[i];
+			}
+		}
+		return najduza;
+	}
+}  

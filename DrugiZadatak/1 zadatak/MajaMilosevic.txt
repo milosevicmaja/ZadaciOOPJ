@@ -1,0 +1,21 @@
+public class MajaMilosevic {
+private String prvi;
+	private String drugi;
+
+	public String getPrvi() {
+		return prvi;
+	}
+	public void setPrvi(String prvi) {
+		this.prvi = prvi;
+	}
+	public String getDrugi() {
+		return drugi;
+	}
+	public void setDrugi(String drugi) {
+		this.drugi = drugi;
+	}
+
+	public boolean isti() {
+		return prvi.equals(drugi);
+	}
+}

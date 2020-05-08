@@ -1,0 +1,39 @@
+public class MajaMilosevic {
+        private String s1;
+	
+	public String gets1() {
+		return s1;
+	}
+	public void sets1(String s1) {
+		this.s1 = s1;
+	}
+	
+	public char ponavljanja() {
+		int br = 0, ch = 0;
+		char cchar = ' ';
+		char[] niz = s1.toCharArray();
+		for (int i = 0; i < niz.length - 1; i++) {
+			for (int j = i + 1; j < niz.length; j++) {
+				if (niz[i] > niz[j]) {
+					char tmp = niz[i];
+					niz[i] = niz[j];
+					niz[j] = tmp;
+				}
+			}
+		}
+		for (int i = 0; i < niz.length - 1; i++) {
+			if (niz[i] != niz[i + 1]) {
+				if (br < ch) {
+					br = ch;
+					cchar = niz[i];
+				}
+				ch = 1;
+			}
+			else {
+				ch++;
+			}
+		}
+		return cchar;
+	}
+	
+}  

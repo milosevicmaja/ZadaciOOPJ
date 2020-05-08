@@ -1,0 +1,15 @@
+public class MajaMilosevic {
+    private String s;
+
+	public String getS() {
+		String r = "";
+		for (int i = s.length() - 1; i >= 0; i--) {
+			r += s.charAt(i);
+		}
+		return r;
+	}
+
+	public void setS(String a) {
+		s = a;
+	}
+}  

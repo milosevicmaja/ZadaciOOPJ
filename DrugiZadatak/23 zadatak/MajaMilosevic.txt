@@ -1,0 +1,20 @@
+public class MajaMilosevic {
+     private String a;
+	
+	public String getA() {
+		return a;
+	}
+
+	public void setA(String a) {
+		this.a = a;
+	}
+
+	public void print() {
+		for (int i = 1; i <= 9; i++) {
+			System.out.print(a.toUpperCase() + " ");
+			if (i % 3 == 0) {
+				System.out.print("\n");
+			}
+		}
+	}
+}  

@@ -1,0 +1,18 @@
+import java.util.Scanner;
+public class GlavnaKlasa {
+		public static void main(String[] args) {
+		Scanner tastatura = new Scanner(System.in);
+		MajaMilosevic mm = new MajaMilosevic();
+        System.out.println("Unesite string A:");
+		mm.setA(tastatura.nextLine());
+        System.out.println("Unesite podstring B:");
+		mm.setB(tastatura.nextLine());
+        System.out.println("Unesite podstring C:");
+		mm.setC(tastatura.nextLine());
+        System.out.println("String sa izvrsenom zamenom:");
+		System.out.println(mm.zamena());
+		tastatura.close();
+	}
+
+
+}

@@ -1,0 +1,28 @@
+public class MajaMilosevic {
+    private int N;
+	private String A;
+	
+	public int getN() {
+		return N;
+	}
+
+	public void setN(int n) {
+		this.N = n;
+	}
+
+	public String getA() {
+		return A;
+	}
+
+	public void setA(String a) {
+		this.A = a;
+	}
+
+	public String stringB() {
+		char[] niz = new char[N];
+		for (int i = 0; i < N; i++) {
+			niz[i] = A.charAt(A.length() - N + i);
+		}
+		return new String(niz);
+	}
+}  

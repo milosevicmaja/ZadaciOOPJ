@@ -1,0 +1,22 @@
+public class MajaMilosevic {
+	private String recenica;
+	public String getRecenica() {
+		return recenica;
+	}
+
+	public void setRecenica(String recenica) {
+		this.recenica = recenica;
+	}
+
+	public boolean palindrom() {
+		String pal = recenica.replaceAll("\\s", "");
+		for (int i = 0; i < recenica.length(); i++) {
+					char prvi = Character.toLowerCase(pal.charAt(i));
+					char drugi = Character.toLowerCase(pal.charAt(pal.length() - i - 1));
+					if (prvi != drugi) {
+							return false;
+					}
+		}
+		return true;
+	}
+}

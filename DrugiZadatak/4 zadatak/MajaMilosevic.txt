@@ -1,0 +1,21 @@
+public class MajaMilosevic {
+        private String recenica;
+         
+        public String getRecenica() {
+            
+            return promena(recenica);
+        }
+		public void setRecenica(String recenica) {
+		this.recenica = recenica;
+		}
+        public static String promena(String recenica){  
+             String reci[]=recenica.split("\\s");  
+             String povecaj="";  
+			for(String r:reci){  
+					String prvi=r.substring(0,1);  
+					String drugi=r.substring(1);  
+					povecaj+=prvi.toUpperCase()+drugi+" ";  
+			}  
+		return povecaj.trim();  
+		}
+}  
