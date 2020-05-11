@@ -1,0 +1,21 @@
+public class TestOsoba {
+public static void main(String[] args) {
+		Osoba osoba = new Osoba();
+		osoba.setIme("Pera");
+		osoba.setPrezime("Peric");
+		osoba.setJmbg("1212007710567");
+		Djak djak = new Djak();
+		djak.setIme("Mika");
+		djak.setPrezime("Lazic");
+		djak.setJmbg("1010000715076");
+		djak.setProsecnaOcena(5.0);
+		Penzioner penzioner = new Penzioner();
+		penzioner.setIme("Zika");
+		penzioner.setPrezime("Zikic");
+		penzioner.setJmbg("0909944710078");
+		penzioner.setPenzija(23400.0);
+		System.out.println("Ime:" + osoba.getIme() + "  Prezime:" + osoba.getPrezime() + "  Jmbg:" + osoba.getJmbg());
+		System.out.println("Ime:" + djak.getIme() + "  Prezime:" + djak.getPrezime() + "  Jmbg:" + djak.getJmbg() + "  Prosecna ocena:" + djak.getProsecnaOcena());
+		System.out.println("Ime:" + penzioner.getIme() + "  Prezime:" + penzioner.getPrezime() + "  Jmbg:" + penzioner.getJmbg() + "  Penzija:" + penzioner.getPenzija());
+	}
+}

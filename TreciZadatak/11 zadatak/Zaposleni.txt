@@ -1,0 +1,20 @@
+public class Zaposleni extends Osoba{
+	private double plata;
+
+	public double getPlata() {
+		return plata;
+	}
+
+	public void setPlata(double plata) {
+		if (plata > 0) {
+			this.plata = plata;
+		} else {
+			System.out.println("Postoji greska (Plata nije veca od 0)");
+		}
+	}
+	
+	public void ispisiZaposlenog() {
+		ispisi();
+		System.out.println("   Plata:" + plata);
+	}
+}

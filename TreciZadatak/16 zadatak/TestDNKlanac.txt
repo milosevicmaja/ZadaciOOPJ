@@ -1,0 +1,16 @@
+public class TestDNKlanac {
+public static void main(String[] args) {
+		DNKlanac dnklanac = new DNKlanac(8);
+		dnklanac.dodavanje('A');
+		dnklanac.dodavanje('C');
+		dnklanac.dodavanje('C');
+		dnklanac.dodavanje('G');
+		dnklanac.dodavanje('T');
+		dnklanac.dodavanje('T');
+		dnklanac.dodavanje('T');
+		dnklanac.dodavanje('T');
+		dnklanac.ispisUJednomRedu();
+		dnklanac.ispisObrnuto();
+	}
+	
+}

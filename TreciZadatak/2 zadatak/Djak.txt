@@ -1,0 +1,16 @@
+public class Djak extends Osoba{
+	private double prosecnaOcena;
+
+	public double getProsecnaOcena() {
+		return prosecnaOcena;
+	}
+
+	public void setProsecnaOcena(double prosecnaOcena) {
+		if (prosecnaOcena >= 1.0 && prosecnaOcena <= 5.0) {
+			this.prosecnaOcena = prosecnaOcena;
+		} else {
+			System.out.println("Postoji greska (Prosecna ocena nije u rasponu 1.0 do 5.0)");
+		}
+	}
+	
+}

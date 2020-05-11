@@ -1,0 +1,61 @@
+public class Knjiga {
+private String naslov;
+	private String autor;
+	private String ISBN;
+	
+	public String getNaslov() {
+		return naslov;
+	}
+	public void setNaslov(String naslov) {
+		if (naslov != null) {
+			this.naslov = naslov;
+		} else {
+			System.out.println("Postoji greska (Naslov ima null vrednost)");
+		}
+	}
+	public String getAutor() {
+		return autor;
+	}
+	public void setAutor(String autor) {
+		if (autor != null) {
+			this.autor = autor;
+		} else {
+			System.out.println("Postoji greska (Autor ima null vrednost)");
+		}
+	}
+	public String getISBN() {
+		return ISBN;
+	}
+	public void setISBN(String iSBN) {
+		if (iSBN != null) {
+			ISBN = iSBN;
+		} else {
+			System.out.println("Postoji greska (ISBN ima null vrednost)");
+		}
+	}
+	@Override
+	public String toString() {
+		return "Naslov knjige:" + naslov + "   Autor:" + autor + "  ISBN:" + ISBN;
+	}
+	@Override
+	public boolean equals(Object object) {
+		if (object == this) {
+			return true;
+		}
+		
+		if (!(object instanceof Knjiga)) {
+			return false;
+		}
+		
+		Knjiga knjiga = (Knjiga) object;
+		
+		return this.ISBN.equals(knjiga.ISBN); 
+	}
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + (this.ISBN != null ? this.ISBN.hashCode() : 0);
+        return hash;
+    }
+}

@@ -1,0 +1,57 @@
+public class Autobus {
+private boolean[] niz = new boolean[50];
+	
+	public Autobus() {
+		for (int i = 0; i < 50; i++) {
+			niz[i] = true;
+		}
+	}
+	
+	public void uvodjenje(int sediste) {
+		if (sediste < 0 || sediste > 49) {
+			System.out.println("Postoji greska (Ne postoji odabrano sediste)");
+			return;
+		}
+		
+		if (!niz[sediste]) {
+			System.out.println("Postoji greska (Sediste je zauzeto)");
+		} else {
+			niz[sediste] = false;
+		}
+	}
+	
+	public boolean brSlobodnih() {
+		for (int i = 0; i < 50; i++) {
+			if (niz[i]) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public int slobodna() {
+		int br = 0;
+		for (int i = 0; i < 50; i++) {
+			if (niz[i]) {
+				br++;
+			}
+		}
+		return br;
+	}
+	
+	public int zauzeta() {
+		int br = 0;
+		for (int i = 0; i < 50; i++) {
+			if (!niz[i]) {
+				br++;
+			}
+		}
+		return br;
+	}
+	
+	public void ispis() {
+		for (int i = 0; i < 50; i++) {
+			System.out.println("Sediste broj " + i + " je " + (niz[i] ? "slobodno." : "zauzeto."));
+		}
+	}
+}
