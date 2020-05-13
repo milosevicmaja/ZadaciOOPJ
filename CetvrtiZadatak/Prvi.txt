@@ -1,0 +1,145 @@
+package obradi;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.border.BevelBorder;
+
+public class Main {
+
+    public static class Forma implements ActionListener{
+        JFrame prozor;
+        JPanel pan;
+        JLabel rec,rec1,rec2,rec3;
+        JTextField polje;
+        JRadioButton r1,r2,r3;
+        ButtonGroup bg;
+        JButton dugme1,dugme2;
+        
+        
+        
+        public Forma() {
+        prozor=new JFrame("Obrada stringova");
+        prozor.setSize(500,500);
+        prozor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        prozor.setLocationRelativeTo(null);
+        
+        pan=new JPanel(null);
+        pan.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        prozor.setContentPane(pan);
+        
+        Font f=new Font("Arial",Font.BOLD, 11);
+        rec=new JLabel("Unos stringa");
+        rec.setForeground(Color.BLUE);
+        rec.setBounds(3,0,150,20);
+        pan.add(rec);
+        
+        rec1=new JLabel("Unesite recenicu:");
+        rec1.setForeground(Color.BLACK);
+        rec1.setBounds(10,30,150,20);
+        rec1.setFont(f);
+        pan.add(rec1);
+        
+        polje=new JTextField();
+        polje.setBounds(10,52,300,20);
+        polje.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1));
+        polje.setBackground(Color.WHITE);
+        pan.add(polje);
+        
+        
+        r1=new JRadioButton("Duzina stringa");
+        r2=new JRadioButton("Ispis stringa");
+        r3=new JRadioButton("Ispis stringa unazad");
+        r1.setBounds(10,80,300,20);
+         r2.setBounds(10,100,300,20);
+          r3.setBounds(10,120,300,20);
+          bg=new ButtonGroup();
+        bg.add(r1);
+        bg.add(r2);
+        bg.add(r3);
+        pan.add(r1);
+        pan.add(r2);
+        pan.add(r3);
+        
+        
+        dugme1=new JButton("Obradi");
+        dugme2=new JButton("Obrisi");
+        dugme1.setSize(40,10);
+        dugme2.setSize(40,10);
+        dugme1.setBounds(80, 170, 100, 30);
+        dugme2.setBounds(180, 170, 100, 30);
+        dugme1.addActionListener(this);
+        dugme2.addActionListener(this);
+        pan.add(dugme1);
+        pan.add(dugme2);
+        
+        
+        rec2=new JLabel("Rezultat obrade:");
+        rec2.setForeground(Color.BLACK);
+        rec2.setBounds(20,210,150,20);
+        rec2.setFont(f);
+        pan.add(rec2);
+       
+        
+        rec3=new JLabel();
+        rec3.setForeground(Color.BLACK);
+        rec3.setBounds(20,220,150,20);
+        rec3.setFont(f);
+        pan.add(rec3);
+        prozor.setVisible(true);
+        prozor.setLayout(null);
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            if(e.getSource() == dugme1){
+                if(r1.isSelected()){duzina();
+                }
+                if(r2.isSelected()){ispis();
+                }
+                if(r3.isSelected()){unazad();
+                }
+            }
+            if(e.getSource() == dugme2){
+               polje.setText("");
+            }
+        }
+
+        private void duzina() {
+            String recenica = polje.getText();
+            int a = recenica.length();
+            String result=String.valueOf(a);
+            rec3.setText(result);
+        }
+
+        private void ispis() {
+            String recenica = polje.getText();
+            rec3.setText(recenica);
+        }
+
+        private void unazad() {
+            String r = "";
+            String recenica = polje.getText();
+		for (int i = recenica.length() - 1; i >= 0; i--) {
+			r += recenica.charAt(i);
+		}
+                rec3.setText(r);
+        }
+    
+    
+    
+    }
+    public static void main(String[] args) {
+        new Forma();
+        
+    }
+
+}
