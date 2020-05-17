@@ -1,0 +1,7 @@
+public class ProizvodException extends RuntimeException {
+
+    public ProizvodException(String errorMsg) {
+        super(errorMsg);
+    }
+
+}
